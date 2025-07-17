@@ -98,3 +98,9 @@ nav a img {
   border-radius: 15px;
   font-size: 12px;
 }
+
+.tag-ativa {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
