@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Primeiro Vídeo",
+    "descricao": "Um vídeo muito interessante sobre criatividade.",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "tipo": "youtube",
+    "tags": [
+      "criatividade",
+      "inspiração"
+    ]
+  },
+  {
+    "titulo": "Reel Criativo",
+    "descricao": "Ideias visuais no Instagram.",
+    "url": "https://www.instagram.com/reel/Cr0m4kLk9xz/",
+    "tipo": "instagram",
+    "tags": [
+      "arte",
+      "vídeo",
+      "design"
+    ]
+  }
+]

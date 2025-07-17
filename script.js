@@ -23,21 +23,58 @@ function criarLetras() {
     } else {
       span.className = "letra";
       span.textContent = char;
+      span.style.color = gerarCorAleatoria();
+      span.style.fontFamily = fontes[Math.floor(Math.random() * fontes.length)];
     }
 
     container.appendChild(span);
   }
 }
 
-function animarLetras() {
-  const letras = document.querySelectorAll(".letra");
-  letras.forEach(letra => {
-    letra.style.fontSize = `${Math.floor(Math.random() * 30) + 20}px`;
-    letra.style.fontFamily = fontes[Math.floor(Math.random() * fontes.length)];
-    letra.style.color = gerarCorAleatoria();
-  });
+function carregarVideos() {
+  fetch("videos.json")
+    .then(res => res.json())
+    .then(videos => {
+      const galeria = document.getElementById("galeria");
+      const tagsContainer = document.getElementById("tags-container");
+      let tagsSet = new Set();
+
+      videos.forEach(video => {
+        const card = document.createElement("div");
+        card.className = "video-card";
+
+        const iframe = document.createElement("iframe");
+        if (video.tipo === "youtube") {
+          const videoId = new URL(video.url).searchParams.get("v");
+          iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        } else if (video.tipo === "instagram") {
+          iframe.src = video.url;
+        }
+
+        const titulo = document.createElement("h2");
+        titulo.textContent = video.titulo;
+
+        const descricao = document.createElement("p");
+        descricao.textContent = video.descricao;
+
+        card.appendChild(iframe);
+        card.appendChild(titulo);
+        card.appendChild(descricao);
+        galeria.appendChild(card);
+
+        if (video.tags) {
+          video.tags.forEach(tag => tagsSet.add(tag));
+        }
+      });
+
+      tagsSet.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+    });
 }
 
 criarLetras();
-animarLetras();
-setInterval(animarLetras, 1000);
+carregarVideos();
