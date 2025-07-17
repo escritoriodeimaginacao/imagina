@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#texto {
+  white-space: nowrap;
+}
+
+.letra {
+  display: inline-block;
+}
+
+.espaco {
+  display: inline-block;
+  width: 16px;
+}
+
+@media (max-width: 600px) {
+  .letra {
+    font-size: 18px !important;
+  }
+}
