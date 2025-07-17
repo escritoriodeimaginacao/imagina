@@ -36,6 +36,8 @@ function carregarVideos() {
     .then(res => res.json())
     .then(videos => {
       const galeria = document.getElementById("galeria");
+      const tagsContainer = document.getElementById("tags-container");
+      let tagsSet = new Set();
 
       videos.forEach(video => {
         const card = document.createElement("div");
@@ -59,6 +61,17 @@ function carregarVideos() {
         card.appendChild(titulo);
         card.appendChild(descricao);
         galeria.appendChild(card);
+
+        if (video.tags) {
+          video.tags.forEach(tag => tagsSet.add(tag));
+        }
+      });
+
+      tagsSet.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
       });
     });
 }
