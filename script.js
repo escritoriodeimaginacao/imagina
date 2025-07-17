@@ -7,9 +7,9 @@ const fontes = [
 ];
 
 function gerarCorAleatoria() {
-  const r = Math.floor(Math.random() * 200);
-  const g = Math.floor(Math.random() * 200);
-  const b = Math.floor(Math.random() * 200);
+  const r = Math.floor(Math.random() * 100) + 155;  // mínimo 155
+  const g = Math.floor(Math.random() * 100) + 155;
+  const b = Math.floor(Math.random() * 100) + 155;
   return `rgb(${r}, ${g}, ${b})`;
 }
 
