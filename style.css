@@ -37,7 +37,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 16px; /* espaçamento entre ícones */
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 nav a {
@@ -45,8 +45,8 @@ nav a {
 }
 
 nav a img {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
