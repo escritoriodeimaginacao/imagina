@@ -32,8 +32,14 @@ header {
   width: 10px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav a img {
-  width: 20px;
+  width: 24px;
+  height: 24px;
   margin-left: 10px;
   filter: invert(100%);
 }
