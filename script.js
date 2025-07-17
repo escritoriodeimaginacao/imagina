@@ -77,4 +77,5 @@ function carregarVideos() {
 }
 
 criarLetras();
+setInterval(criarLetras, 1000);
 carregarVideos();
