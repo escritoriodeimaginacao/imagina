@@ -39,7 +39,7 @@ nav a img {
   max-height: 100%;
   object-fit: contain;
   margin-left: 10px;
-  filter: invert(100%);
+  /*filter: invert(100%);*/
   display: inline-block;
 }
 
