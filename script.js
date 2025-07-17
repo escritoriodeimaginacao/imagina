@@ -15,7 +15,7 @@ function gerarCorAleatoria() {
 
 function criarLetras() {
   container.innerHTML = "";
-  for (let char of texto) {
+  for (let char of h1) {
     const span = document.createElement("span");
 
     if (char === " ") {
