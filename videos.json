@@ -12,14 +12,15 @@
     ]
   },
   {
-    "titulo": "Reel Criativo",
-    "descricao": "Ideias visuais no Instagram.",
-    "url": "https://www.instagram.com/reel/Cr0m4kLk9xz/",
-    "tipo": "instagram",
+    "titulo": "A grande escavação",
+    "descricao": "Uma grande para os arqueólogos.",
+    "url": "https://www.youtube.com/watch?v=XAj8MkAFqxY",
+    "tipo": "youtube",
     "tags": [
-      "arte",
-      "vídeo",
-      "design"
+      "blocos",
+      "escavação",
+      "animação",
+      "stop-motion"
     ]
   }
 ]
